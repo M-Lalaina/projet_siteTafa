@@ -1,0 +1,24 @@
+{
+  "name": "projet_sitetafa",
+  "version": "1.0.0",
+  "description": "-   [https://github.com/Nathanwalker28](https://github.com/Nathanwalker28)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/M-Lalaina/projet_siteTafa.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/M-Lalaina/projet_siteTafa/issues"
+  },
+  "homepage": "https://github.com/M-Lalaina/projet_siteTafa#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.2",
+    "jquery": "^3.6.1",
+    "sass": "^1.55.0"
+  }
+}
