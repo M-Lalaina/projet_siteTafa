@@ -1,0 +1,69 @@
+@font-face {
+    font-family: "poppins";
+    src: url(/assets/fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: "rajdhani";
+    src: url(/assets/fonts/Rajdhani-Regular.ttf);
+}
+
+body {
+    background: #beb0d0cf;
+}
+
+nav {
+    ul {
+        li {
+            .nav-link {
+                font-family: "rajdhani", sans-serif;
+                font-size: 0.8rem;
+                letter-spacing: 0.03rem;
+                color: #48365ee8;
+            }
+        }
+    }
+}
+
+nav {
+    ul {
+        li {
+            position: relative;
+            a:hover,
+            a:focus {
+                color: #48365ef7 !important;
+            }
+        }
+    }
+}
+
+nav {
+    ul {
+        li::after {
+            content: "";
+            height: 2px;
+            width: 0;
+            background: #fec104;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            transition: 0.4s;
+        }
+        li:hover::after {
+            width: 100%;
+        }
+    }
+}
+
+.justify {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.text_heading {
+    color: #48365ee8;
+    p {
+        font-family: "poppins", sans-serif;
+    }
+}
