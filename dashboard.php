@@ -24,7 +24,7 @@ $sql=mysqli_query($connexion , "SELECT * FROM  candidates");
                 <a href="#" class="list-group-item list-group-item-action bg-transparent second-text active">
                     <i class="fas fa-tachometer-alt me-2"></i>dasboard
                 </a>
-                <a href="#"class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                <a href="update.php"class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
                     <i class="fa-light fa-file-pen"></i>update
                 </a>
                 <a href="#"class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
