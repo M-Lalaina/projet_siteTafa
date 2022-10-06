@@ -1,4 +1,8 @@
-
+<?php
+require"connexion.php";
+require"insert.php";
+$sql=mysqli_query($connexion , "SELECT * FROM  candidates");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,7 +34,7 @@
                     <i class="fa-solid fa-user-plus"></i>ajouter
                 </a>
                 <a href="#"class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
-                    <i class="fas fa-gift me-2"></i>product
+                <i class="fa-solid fa-file-arrow-down"></i>download
                 </a>
                 <a href="#"class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
                     <i class="fas fa-comment-dots me-2"></i>chat
@@ -78,30 +82,27 @@
                     <table class="table table-striped">
                         <thead>
                           <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">First</th>
-                            <th scope="col">Last</th>
-                            <th scope="col">Handle</th>
+                            <th scope="col">ID</th>
+                            <th scope="col">name</th>
+                            <th scope="col">firtname</th>
+                            <th scope="col">email</th>
+                            <th scope="col">contact</th>
+                            <th scope="col">CV</th>
+                            <th scope="col">Cover letter</th>
                           </tr>
                         </thead>
                         <tbody>
-                          <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">3</th>
-                            <td colspan="2">Larry the Bird</td>
-                            <td>@twitter</td>
-                          </tr>
+                             <?php foreach($sql as $value){?>
+                                <tr>
+                                    <td><?=$value['id']?></td>
+                                    <td><?=$value['name']?></td>
+                                    <td><?=$value['firstname']?></td>
+                                    <td><?=$value['email']?></td>
+                                    <td><?=$value['contact']?></td> 
+                                    <td><?=$value['resume_url']?></td>
+                                    <td><?=$value['cover_letter_url']?></td>
+                                </tr>
+                             <?php } ?>
                         </tbody>
                       </table>
                 </div>
