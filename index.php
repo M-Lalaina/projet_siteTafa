@@ -1,3 +1,8 @@
+<?php
+    if(isset($_POST['btn'])) {
+        print_r($_FILES);
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
