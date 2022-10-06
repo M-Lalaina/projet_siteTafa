@@ -19,6 +19,7 @@
   "dependencies": {
     "bootstrap": "^5.2.2",
     "jquery": "^3.6.1",
-    "sass": "^1.55.0"
+    "sass": "^1.55.0",
+    "vivus": "^0.4.6"
   }
 }
