@@ -1,59 +1,109 @@
-@font-face {
-    font-family: "poppins";
-    src: url(/assets/fonts/Poppins-Regular.ttf);
-}
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Rajdhani&display=swap");
 
-@font-face {
-    font-family: "rajdhani";
-    src: url(/assets/fonts/Rajdhani-Regular.ttf);
+$--body_bg: #f3f2f4cf;
+$--yellow: #dea807;
+$--purple__darker: #48365ee8;
+$--purple__lighter: #865eb6fd;
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    background: #beb0d0cf;
+    background: $--body_bg;
+}
+
+nav::after {
+    content: "";
+    clear: both;
+    display: table;
 }
 
 nav {
+    color: $--purple__lighter;
+    font-weight: 900;
     ul {
-        li {
-            .nav-link {
-                font-family: "rajdhani", sans-serif;
-                font-size: 0.8rem;
-                letter-spacing: 0.03rem;
-                color: #48365ee8;
-            }
-        }
-    }
-}
-
-nav {
-    ul {
+        position: relative;
         li {
             position: relative;
+            display: inline-block;
+
+            a {
+                font-family: "rajdhani", sans-serif;
+                font-size: 0.9rem;
+                padding: 0 0.3rem 0.3rem 0.3rem !important;
+                text-shadow: 0px 0px 1px #48365ee8;
+            }
             a:hover,
-            a:focus {
-                color: #48365ef7 !important;
+            a:focus,
+            a:active {
+                color: $--yellow !important;
             }
         }
-    }
-}
 
-nav {
-    ul {
         li::after {
             content: "";
-            height: 2px;
+            height: 3px;
             width: 0;
-            background: #fec104;
+            background: $--yellow;
             position: absolute;
             left: 0;
             bottom: 0;
             transition: 0.4s;
         }
+
         li:hover::after {
             width: 100%;
         }
+
+        li:hover > ul {
+            top: 30px;
+            opacity: 1;
+            visibility: visible;
+        }
+
+        ul {
+            position: absolute;
+            top: 55px;
+            background: #48365e6e;
+            display: block !important;
+            opacity: 0;
+            visibility: hidden;
+            transition: top 0.3s;
+            li {
+                position: relative;
+                margin: 0;
+                width: 170px;
+                height: 40px;
+                display: list-item;
+                list-style-type: none;
+                a {
+                    font-size: 0.5rem;
+                }
+                a:hover,
+                a:focus,
+                a:active {
+                    color: #dea807cf !important;
+                }
+                a:hover {
+                    font-size: 0.9rem;
+                }
+            }
+
+            li::after {
+                content: "";
+                height: 0;
+                width: 0;
+            }
+        }
     }
 }
+
+//..........................
 
 .justify {
     display: flex;
@@ -62,8 +112,15 @@ nav {
 }
 
 .text_heading {
-    color: #48365ee8;
+    h1 {
+        color: $--yellow;
+    }
     p {
+        color: white;
         font-family: "poppins", sans-serif;
     }
+}
+
+.bg__purple {
+    background: $--purple__darker;
 }
