@@ -1,3 +1,8 @@
+<?php
+    if(isset($_POST['btn'])) {
+        print_r($_FILES);
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +20,7 @@
                         <div class="titre">
                             <h1 class="text is-family-monospace is-size-1 animate__animated animate__bounce">INCRIPTION TAFA 3.0</h1>
                         </div>
-                        <form class="formulaire" action="/action_index.php">
+                        <form class="formulaire" action="uploade.php" method="post" enctype="multipart/form-data">
                             <div class="field">
                                 <label class="label">Nom</label>
                                 <div class="control">
@@ -51,7 +56,7 @@
                                         <img src="assets/imgs/icon.png" alt="">
                                     </div>
                                     <div class="control">
-                                        <input  type="file" name="cv">
+                                        <input  type="file" name="cv" value="">
                                     </div>
                                 </div>
                             </div>
