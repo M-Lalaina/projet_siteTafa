@@ -1,6 +1,7 @@
 <?php
 require"connexion.php";
 require"insert.php";
+require"delete.php";
 $sql=mysqli_query($connexion , "SELECT * FROM  candidates");
 ?>
 <!DOCTYPE html>
@@ -12,34 +13,35 @@ $sql=mysqli_query($connexion , "SELECT * FROM  candidates");
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css" integrity="sha512-Ez0cGzNzHR1tYAv56860NLspgUGuQw16GiOOp/I2LuTmpSK9xDXlgJz3XN4cnpXWDmkNBKXR/VDMTCnAaEooxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="assets/styles/dashboard.style.css">
 </head>
 <body>
-    <div class="d-flex " id="wrapper">
+    <div class="d-flex  " id="wrapper" >
         <div class="bg-white" id="sidebar-wrapper">
             <div class="slide-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase border-bottom"> 
-                <i class="fas fa-user-secret me-2"></i>codersbite
+                <i class="fas fa-user-secret me-2"></i>session adminS
             </div> 
-            <div class="list-group list-group-flush my-3">
-                <a href="#" class="list-group-item list-group-item-action bg-transparent second-text active">
+            <div class="list-group list-group-flush my-3 #4a148c purple darken-4">
+                <a href="#" class="list-group-item list-group-item-action bg-transparent text-white active">
                     <i class="fas fa-tachometer-alt me-2"></i>dasboard
                 </a>
-                <a href="update.php"class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                <a href="update.php"class="list-group-item list-group-item-action bg-transparent text-white fw-bold">
                     <i class="fa-light fa-file-pen"></i>update
                 </a>
-                <a href="#"class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
-                    <i class="fa-solid fa-trash"></i></i>delete
+                <a href="#"class="list-group-item list-group-item-action bg-transparent text-white fw-bold">
+                    <i class="fa-solid fa-trash"style="color:red"></i>delete
                 </a>
-                <a href="#"class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
-                    <i class="fa-solid fa-user-plus"></i>ajouter
+                <a href="#"class="list-group-item list-group-item-action bg-transparent text-white fw-bold">
+                    <i class="fa-solid fa-user-plus"style="color:blue"></i>ajouter
                 </a>
-                <a href="#"class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
-                <i class="fa-solid fa-file-arrow-down"></i>download
+                <a href="#"class="list-group-item list-group-item-action bg-transparent text-white fw-bold">
+                <i class="fa-solid fa-file-arrow-down"style="color:blue"></i>download
                 </a>
-                <a href="#"class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
-                    <i class="fas fa-comment-dots me-2"></i>chat
+                <a href="#"class="list-group-item list-group-item-action bg-transparent text-white fw-bold">
+                    <i class="fas fa-comment-dots me-2" style="color:green"></i>chat
                 </a>
-                <a href="#"class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                <a href="#"class="list-group-item list-group-item-action bg-transparent text-white fw-bold">
                     <i class="fas fa-map-marker-alt me-2"></i>outlet
                 </a>
                 <a href="#"class="list-group-item list-group-item-action bg-transparent text-danger fw-bold">
@@ -75,9 +77,16 @@ $sql=mysqli_query($connexion , "SELECT * FROM  candidates");
                 </div>
             </nav>
             <div class="container-fluid px-4">
-                <h2>Listes candidatures</h2>
+                <div class="row">
+                    <div class="col">
+                       <a href=""> <h2>Listes candidatures</h2></a>
+                    </div>
+                    <div class="col">
+                        <a href="#"><h2>listes des candidats valider</h2></a>
+                    </div>
+                </div>
             </div>
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row">
                     <table class="table table-striped">
                         <thead>
@@ -89,6 +98,9 @@ $sql=mysqli_query($connexion , "SELECT * FROM  candidates");
                             <th scope="col">contact</th>
                             <th scope="col">CV</th>
                             <th scope="col">Cover letter</th>
+                            <th scope="col">action</th>
+                            <th scope="col">validation</th>
+                            
                           </tr>
                         </thead>
                         <tbody>
@@ -101,6 +113,10 @@ $sql=mysqli_query($connexion , "SELECT * FROM  candidates");
                                     <td><?=$value['contact']?></td> 
                                     <td><?=$value['resume_url']?></td>
                                     <td><?=$value['cover_letter_url']?></td>
+                                    <td> <a href="delete.php?id=<?=$value['id']?>"class="bg-transparent second-text fw-bold text-decoration-none">
+                                    <i class="fa-solid fa-trash"style="color:red"></i>delete </a> </td>
+                                    <td> <a href="#"class="bg-transparent second-text fw-bold text-decoration-none ">
+                                    <i class=""><input type="checkbox" name="checkbox" style="color:green" id=""></i>valider </a></td>
                                 </tr>
                              <?php } ?>
                         </tbody>
