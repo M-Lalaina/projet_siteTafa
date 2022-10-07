@@ -1,30 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Rajdhani&display=swap");
-
-$--body_bg: #f3f2f4cf;
-$--yellow: #dea807;
-$--purple__darker: #48365ee8;
-$--purple__lighter: #865eb6fd;
-
-*,
-::before,
-::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    background: $--body_bg;
-}
-
-nav::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
 nav {
-    color: $--purple__lighter;
+    color: $purple__light;
     font-weight: 900;
     ul {
         position: relative;
@@ -41,15 +16,19 @@ nav {
             a:hover,
             a:focus,
             a:active {
-                color: $--yellow !important;
+                color: $yellow !important;
             }
         }
-
+        #list_icon::after {
+            content: "";
+            height: 0px;
+            width: 0;
+        }
         li::after {
             content: "";
             height: 3px;
             width: 0;
-            background: $--yellow;
+            background: $yellow;
             position: absolute;
             left: 0;
             bottom: 0;
@@ -61,7 +40,7 @@ nav {
         }
 
         li:hover > ul {
-            top: 30px;
+            top: 25px;
             opacity: 1;
             visibility: visible;
         }
@@ -69,7 +48,7 @@ nav {
         ul {
             position: absolute;
             top: 55px;
-            background: #48365e6e;
+            background: #48365e4b;
             display: block !important;
             opacity: 0;
             visibility: hidden;
@@ -78,9 +57,10 @@ nav {
                 position: relative;
                 margin: 0;
                 width: 170px;
-                height: 40px;
+                height: 25px;
                 display: list-item;
                 list-style-type: none;
+                font-size: 0.8rem;
                 a {
                     font-size: 0.5rem;
                 }
@@ -103,17 +83,15 @@ nav {
     }
 }
 
-//..........................
-
-.justify {
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
+nav::after {
+    content: "";
+    clear: both;
+    display: table;
 }
 
 .text_heading {
     h1 {
-        color: $--yellow;
+        color: $yellow;
     }
     p {
         color: white;
@@ -122,5 +100,5 @@ nav {
 }
 
 .bg__purple {
-    background: $--purple__darker;
+    background: $purple__dark;
 }

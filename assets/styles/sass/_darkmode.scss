@@ -1,0 +1,26 @@
+.bodyDarkMode {
+    background: $body_dark_color;
+    transition: ease-in 0.5s;
+    #logo_tafa_1 {
+        filter: drop-shadow(2px 2px 5px #865eb6fd);
+    }
+
+    nav {
+        color: $purple__lighter;
+        font-weight: 700;
+    }
+
+    main {
+        .subtitle,
+        h2 {
+            color: $body_bg;
+        }
+    }
+
+    #footer_container {
+        background: $body_bg !important;
+    }
+    .footer_icons {
+        color: #502f8a !important;
+    }
+}

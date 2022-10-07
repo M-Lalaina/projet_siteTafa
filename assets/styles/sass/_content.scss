@@ -1,0 +1,21 @@
+.link {
+    text-decoration: none;
+    color: $purple__light;
+    font-weight: 600;
+    transition: ease-in-out 0.3s;
+}
+.link:hover {
+    color: $yellow;
+    font-size: 1.3rem;
+    transition: ease-in-out 0.3s;
+}
+.subtitle {
+    text-align: justify;
+}
+
+hr {
+    margin: 0 5rem;
+    background-color: $yellow;
+    height: 3px;
+    border: 1px solid $yellow;
+}
