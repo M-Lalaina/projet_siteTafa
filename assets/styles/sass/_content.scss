@@ -12,10 +12,39 @@
 .subtitle {
     text-align: justify;
 }
-
+#subscribe {
+    box-shadow: $yellow 0px 5px 15px;
+    color: $purple__dark;
+    padding: 1rem 1.8rem;
+    font-family: "poppins", sans-serif;
+}
 hr {
-    margin: 0 5rem;
+    margin: 0 10rem;
     background-color: $yellow;
     height: 3px;
     border: 1px solid $yellow;
+}
+
+.references {
+    margin: 1.5rem;
+    background-image: linear-gradient(
+        to right top,
+        #59486d,
+        #6d5a7d,
+        #806c8e,
+        #957f9f,
+        #a992b1
+    );
+}
+
+.purple_color {
+    color: $purple__dark;
+}
+
+.border_purple {
+    border: 3px solid #806c8e;
+}
+
+.bg_purple {
+    background: $purple__dark;
 }
