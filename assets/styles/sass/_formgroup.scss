@@ -1,13 +1,16 @@
 #subscribe_btn {
-    padding: 1.2rem 4rem;
+    padding: 1.3rem 4rem;
     margin: 2rem 0;
     border: none;
     font-size: 1.5rem;
     font-weight: 900;
-    &:hover {
+    &:hover,
+    &:focus {
         color: $yellow;
+        background: #f2e2b1;
     }
 }
+
 .button {
     position: relative;
     padding: 1em 1.5em;
@@ -63,8 +66,50 @@
     }
 }
 
-input[type="email"],
-input[type="submit"] {
-    outline: none;
-    border: none;
+main {
+    input,
+    textarea {
+        border: 2px solid $purple__lighter;
+        border-radius: 5px;
+        width: 100%;
+        &:focus {
+            outline: none;
+            background: $purple__lighter;
+            color: #ffffff;
+        }
+    }
+
+    textarea {
+        height: 120px;
+    }
+
+    input::placeholder,
+    textarea::placeholder,
+    #submit_btn {
+        color: $purple__light;
+        text-shadow: 0px -1px 1px $purple__light;
+    }
+}
+
+footer {
+    input[type="email"],
+    input[type="submit"] {
+        outline: none;
+        border: none;
+    }
+}
+
+.formulaires_contact {
+    padding: 0 15%;
+}
+
+#submit_btn {
+    width: 20%;
+    background-color: #fff;
+    border: 5px solid $purple__lighter;
+    &:hover {
+        background: #f2e2b1;
+        border: 5px solid $yellow;
+        color: $yellow;
+    }
 }
