@@ -20,7 +20,8 @@
             <div class="titre">
                 <h1 class="text is-family-monospace is-size-1 animate__animated animate__bounce">INCRIPTION TAFA 3.0</h1>
             </div>
-            <form class="formulaire" action="insert.php" method="post" enctype="multipart/form-data">
+
+            <form class="formulaire" action="./insert.php" method="post" enctype="multipart/form-data">
                 <div class="field">
                     <label class="label">Nom</label>
                     <div class="control">
@@ -53,7 +54,7 @@
                     <label for="myfile" class="label">CV:</label>
                     <div class="file">
                         <div class="icon">
-                            <img src="assets/imgs/icon.png" alt="">
+                            <img src="/assets/imgs/icon.png" alt="">
                         </div>
                         <div class="control">
                             <input  type="file" name="cv">
@@ -65,7 +66,7 @@
                     <label for="myfile" class="label">Lettre de motivation:</label>
                     <div class="file">
                         <div class="icon">
-                            <img src="assets/imgs/icon.png" alt="">
+                            <img src="/assets/imgs/icon.png" alt="">
                         </div>
                         <div class="control">
                             <input  type="file" name="lm">
@@ -79,7 +80,7 @@
             </form>
         </div>
         <div class="image">
-            <img src="assets/imgs/tafa.jpg" alt="TAFA 2.0">
+            <img src="/assets/imgs/tafa.jpg" alt="TAFA 2.0">
         </div>   
     </div>
 </body>

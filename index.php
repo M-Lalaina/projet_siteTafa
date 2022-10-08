@@ -281,17 +281,20 @@
                             <div
                                 class="d-flex align-items-center justify-content-center"
                             >
-                                <button
-                                    type="submit"
-                                    class="button type"
-                                    id="subscribe_btn"
-                                >
-                                    <a
-                                        class="nav-link text-uppercase"
-                                        href="./assets/php/index.php"
-                                        >S' inscrire</a
+                                <form action="./assets/php/inscription.php">
+                                    <button
+                                        type="submit"
+                                        class="button type"
+                                        id="subscribe_btn"
                                     >
-                                </button>
+                                        <a
+                                            class="nav-link text-uppercase"
+                                            href=""
+                                        >
+                                            S' inscrire
+                                        </a>
+                                    </button>
+                                </form>
                             </div>
                         </div>
                     </div>
