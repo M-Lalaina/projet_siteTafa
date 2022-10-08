@@ -1,7 +1,5 @@
 <?php
-    if(isset($_POST['btn'])) {
-        print_r($_FILES);
-    }
+    include('insert.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="./assets/styles/inscription.style.css">
+    <link rel="stylesheet" href="../styles/css/inscription.style.css">
     <title>Inscription tafa </title>
 </head>
 <body>
@@ -20,8 +18,21 @@
             <div class="titre">
                 <h1 class="text is-family-monospace is-size-1 animate__animated animate__bounce">INCRIPTION TAFA 3.0</h1>
             </div>
+            <?php if(isset($error)){ ?>
+                <div class="notification is-danger">
+                    <button class="delete"></button>
+                    <?= $error ?>
+                </div>
+            <?php    } ?>
 
-            <form class="formulaire" action="./insert.php" method="post" enctype="multipart/form-data">
+            <?php if(isset($message)){ ?>
+                <div class="notification is-success">
+                    <button class="delete"></button>
+                    <?= $message ?>
+                </div>
+            <?php    } ?>
+
+            <form class="formulaire" method="post" enctype="multipart/form-data">
                 <div class="field">
                     <label class="label">Nom</label>
                     <div class="control">
@@ -83,5 +94,16 @@
             <img src="/assets/imgs/tafa.jpg" alt="TAFA 2.0">
         </div>   
     </div>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', () => {
+            (document.querySelectorAll('.notification .delete') || []).forEach(($delete) => {
+                const $notification = $delete.parentNode;
+
+                $delete.addEventListener('click', () => {
+                $notification.parentNode.removeChild($notification);
+                });
+            });
+        });
+    </script>
 </body>
 </html>
