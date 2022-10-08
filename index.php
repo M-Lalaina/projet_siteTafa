@@ -19,6 +19,14 @@
             href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
         />
 
+        <!-- cdn lonk -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+            integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+            crossorigin="anonymous"
+        />
+
         <!-- .css -->
 
         <link rel="stylesheet" href="./assets/styles/css/style.css" />
@@ -48,7 +56,7 @@
                                 <li class="list-group-item">
                                     <a
                                         class="nav-link text-uppercase fw-bold"
-                                        href="index.html"
+                                        href="index.php"
                                     >
                                         accueil
                                     </a>
