@@ -1,0 +1,63 @@
+.bodyDarkMode {
+    background: $body_dark_color;
+    transition: ease-in 0.5s;
+    #logo_tafa_1 {
+        filter: drop-shadow(2px 2px 5px #865eb6fd);
+    }
+
+    nav {
+        color: $purple__lighter;
+        font-weight: 700;
+    }
+
+    .title {
+        color: $purple__lighter;
+    }
+
+    main {
+        .subtitle,
+        h2 {
+            color: $body_bg;
+        }
+        #subscribe {
+            color: $purple__lighter;
+        }
+        #subscribe_btn {
+            color: $yellow;
+            background: transparent;
+            &:hover {
+                color: $purple__lighter;
+            }
+        }
+    }
+    .button.type {
+        &.type::after {
+            border-top-color: transparent;
+            border-left-color: transparent;
+            border-bottom-color: $yellow;
+            border-right-color: $yellow;
+        }
+        &.type::before {
+            border-bottom-color: transparent;
+            border-right-color: transparent;
+            border-top-color: $yellow;
+            border-left-color: $yellow;
+        }
+        &.type:hover {
+            &:after,
+            &:before {
+                border-bottom-color: $purple__lighter;
+                border-right-color: $purple__lighter;
+                border-top-color: $purple__lighter;
+                border-left-color: $purple__lighter;
+            }
+        }
+    }
+
+    #footer_container {
+        background: $body_bg !important;
+    }
+    .footer_icons {
+        color: #502f8a !important;
+    }
+}

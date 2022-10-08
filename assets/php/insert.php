@@ -24,7 +24,7 @@
         else{
             echo "error".mysqli_error($connexion);
         }
-        header("location:index.php");
+        header("location:inscription.php");
         exit(0);
     }
 
