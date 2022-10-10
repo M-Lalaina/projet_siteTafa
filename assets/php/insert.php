@@ -1,9 +1,16 @@
 <?php
     require("connexion.php");
         if (isset($_POST['btn'])) {
-        $nom              = $_POST['nom'];
-        $prenom           = $_POST['prenom'];
-        $mail             = $_POST['mail'];
+
+        function test_input($data) {
+            $data = trim($data);
+            $data = stripslashes($data);
+            $data = htmlspecialchars($data);
+            return $data;
+        }
+        $nom              = test_input($_POST['nom']);
+        $prenom           = test_input($_POST['prenom']);
+        $mail             = test_input($_POST['mail']);
         $contact          = $_POST['contact'];
         $CvfileName       = $_FILES['cv']['name'];
         $CvfileTmpName    = $_FILES['cv']['tmp_name'];
