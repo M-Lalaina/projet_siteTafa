@@ -46,7 +46,7 @@ $sql=mysqli_query($connexion , "SELECT * FROM  candidates");
                         <a href="#"class="list-group-item list-group-item-action bg-transparent text-white fw-bold">
                             <i class="fas fa-map-marker-alt me-2"></i>outlet
                         </a>
-                        <a href="#"class="list-group-item list-group-item-action bg-transparent text-danger fw-bold">
+                        <a href="login.php"class="list-group-item list-group-item-action bg-transparent text-danger fw-bold">
                             <i class="fas fa-project-diagram me-2"></i>logout
                         </a>
                 </div>
