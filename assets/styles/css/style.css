@@ -120,7 +120,7 @@ nav {
       nav ul ul li {
         position: relative;
         margin: 0;
-        width: 170px;
+        width: 130px;
         height: 25px;
         display: list-item;
         list-style-type: none;
@@ -143,14 +143,19 @@ nav::after {
   clear: both;
   display: table; }
 
+#heading {
+  background: #48365ee8;
+  transition: 0.3s ease-in-out; }
+
+/*........ menu .........*/
+#menu_btn {
+  display: none; }
+
 .text_heading h1 {
   color: #f4ba0c; }
 .text_heading p {
   color: white;
   font-family: "poppins", sans-serif; }
-
-.bg__purple {
-  background: #48365ee8; }
 
 .link {
   text-decoration: none;
@@ -184,6 +189,9 @@ hr {
 
 .purple_color {
   color: #48365ee8; }
+
+.yellow_color {
+  color: #f4ba0c; }
 
 .border_purple {
   border: 3px solid #806c8e; }
@@ -289,6 +297,9 @@ footer input[type="submit"] {
     font-weight: 700; }
   .bodyDarkMode .title {
     color: #d3c6e3fd; }
+  .bodyDarkMode #heading {
+    background: #806c8e;
+    transition: 0.3s ease-in-out; }
   .bodyDarkMode main .subtitle,
   .bodyDarkMode main h2 {
     color: #ffffff; }

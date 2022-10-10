@@ -14,12 +14,12 @@
 
         <!-- Bootstrap -->
 
-        <link
+        <!-- <link
             rel="stylesheet"
             href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
-        />
+        /> -->
 
-        <!-- cdn lonk -->
+        <!-- cdn link -->
         <link
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
@@ -47,11 +47,11 @@
                     </div>
 
                     <div
-                        class="col-8 px-0 d-flex justify-content-end align-items-end"
+                        class="col-8 px-0 d-flex justify-content-end align-items-center"
                     >
-                        <nav>
+                        <nav class="navbar">
                             <ul
-                                class="d-flex justify-content-end m-0 p-0 gap-4 gap-lg-5"
+                                class="d-lg-flex justify-content-end m-0 p-0 gap-4 gap-lg-5"
                             >
                                 <li class="list-group-item">
                                     <a
@@ -103,27 +103,27 @@
                                 <li class="list-group-item">
                                     <a
                                         class="nav-link text-uppercase fw-bold"
-                                        href="./pages/historique.html"
+                                        href="#"
                                         >historique</a
                                     >
-                                    <!-- <ul class="px-0 py-2 lh-lg">
+                                    <ul class="px-0 py-2 lh-lg">
                                         <li>
                                             <a
-                                                href="./pages/historique.html"
+                                                href="./pages/historique2020.html"
                                                 class="nav-link fw-bold text-uppercase"
                                                 >2020</a
                                             >
-                                        </li>                              
+                                        </li>
 
                                         <li>
                                             <a
-                                                href="./pages/historique.html"
+                                                href="./pages/historique2021.html"
                                                 class="nav-link fw-bold text-uppercase"
                                             >
                                                 2021
                                             </a>
                                         </li>
-                                    </ul> -->
+                                    </ul>
                                 </li>
 
                                 <!-- Nous contacter -->
@@ -131,28 +131,44 @@
                                 <li class="list-group-item">
                                     <a
                                         class="nav-link text-uppercase fw-bold"
-                                        href="./pages/contact.html"
-                                        >contact</a
+                                        href="#"
                                     >
-                                </li>
-
-                                <!-- icon for darkmode -->
-
-                                <li id="list_icon">
-                                    <i
-                                        id="icon_darkmode"
-                                        class="fa fa-moon fs-6 text-black"
-                                    ></i>
+                                        contact
+                                    </a>
+                                    <ul class="px-0 py-2 lh-lg">
+                                        <li>
+                                            <a
+                                                href="./pages/contact.html"
+                                                class="nav-link fw-bold text-uppercase"
+                                                >prendre contact</a
+                                            >
+                                        </li>
+                                    </ul>
                                 </li>
                             </ul>
                         </nav>
+
+                        <!-- menu icon -->
+
+                        <div class="menu_icon ms-4 me-4">
+                            <i class="fa-solid fa-bars" id="menu_btn"></i>
+                        </div>
+
+                        <!-- icon for darkmode -->
+
+                        <div id="list_icon ">
+                            <i
+                                id="icon_darkmode"
+                                class="fa fa-moon fs-6 text-black"
+                            ></i>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- / -->
 
-            <div class="container-fluid bg__purple" id="heading">
+            <div class="container-fluid" id="heading">
                 <div class="row">
                     <div
                         class="col-lg-6 d-flex align-items-center text_heading pt-3"
@@ -223,7 +239,7 @@
             <div class="container-fluid py-5">
                 <div class="row">
                     <div
-                        class="col-lg d-flex align-items-center justify-content-center"
+                        class="col-lg d-flex align-items-center justify-content-center d-none d-lg-block"
                     >
                         <img
                             src="./assets/imgs/subscribe.png"
@@ -319,9 +335,12 @@
                         <div
                             class="col references py-5 px-3 subtitle text-white"
                         >
-                            <p class="text-uppercase fw-bold sous_titre">
+                            <p
+                                class="text-uppercase fw-bold sous_titre yellow_color"
+                            >
                                 passion for humanity
                             </p>
+
                             <p>
                                 <b>Passion for Humanity</b> ou <b>P4H</b> , est
                                 une organisation fondée en 2017.
@@ -333,11 +352,13 @@
                                 de les amener à travailler sur des projets
                                 innovants, touchant la technologie numérique.
                             </p>
+
                             <p>
                                 <span class="fw-bold">Secteur : </span>
                                 Informatique, Formation, Education et
                                 Communication
                             </p>
+
                             <p>
                                 <span class="fw-bold">Site web :</span>
                                 <span>
@@ -351,7 +372,7 @@
                         </div>
 
                         <div
-                            class="col d-flex justify-content-center align-items-center"
+                            class="col d-none d-lg-flex justify-content-center align-items-center"
                         >
                             <div>
                                 <img
@@ -366,7 +387,7 @@
 
                     <div class="row my-3">
                         <div
-                            class="col d-flex justify-content-center align-items-center"
+                            class="col d-none d-lg-flex justify-content-center align-items-center"
                         >
                             <div>
                                 <img
@@ -377,10 +398,13 @@
                                 />
                             </div>
                         </div>
+
                         <div
                             class="col references py-5 px-3 subtitle text-white"
                         >
-                            <p class="text-uppercase fw-bold sous_titre">
+                            <p
+                                class="text-uppercase fw-bold sous_titre yellow_color"
+                            >
                                 Association RISE
                             </p>
                             <p>
@@ -419,13 +443,13 @@
 
             <hr />
 
-            <div class="container py-5">
+            <div class="py-5">
                 <div class="row text-center pb-5">
                     <p class="fs-1 title">Nos partenaires</p>
                 </div>
 
                 <div
-                    class="container d-md-flex justify-content-center align-items-center gap-lg-5 gap-md-2 text-center"
+                    class="bg-white d-md-flex justify-content-center align-items-center gap-lg-5 gap-md-2 text-center"
                 >
                     <div class="row py-2">
                         <div class="col-sm col-md">
