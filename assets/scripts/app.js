@@ -11,9 +11,11 @@ var logo2 = document.getElementById("logo_tafa_2");
 var darkMode = document.getElementById("icon_darkmode");
 var heading = document.getElementById("heading");
 var footerContainer = document.getElementById("footer_container");
+var menuBtn = document.getElementById("menu_btn");
 
 const titleAnim = document.querySelector("h1");
-const storyAnim = document.getElementById("story_anim");
+const storyAnim1 = document.getElementById("story_anim_1");
+const storyAnim2 = document.getElementById("story_anim_2");
 
 logo1.setAttribute("src", "/assets/imgs/logo_tafa.1.png");
 logo2.setAttribute("src", "/assets/imgs/logo_tafa.2.png");
@@ -35,11 +37,12 @@ darkMode.addEventListener("click", () => {
         darkMode.classList.add("text-white");
 
         //logoChange
-        logo1.setAttribute("src", "assets/imgs/logo_tafa.2.png");
-        logo2.setAttribute("src", "assets/imgs/logo_tafa.1.png");
+        logo1.setAttribute("src", "/assets/imgs/logo_tafa.2.png");
+        logo2.setAttribute("src", "/assets/imgs/logo_tafa.1.png");
 
         //bgChange
         footerContainer.classList.replace("text-white", "text-black");
+        menuBtn.classList.add("text-white");
     } else {
         //icon_change
         darkMode.classList.replace("fa-sun", "fa-moon");
@@ -48,11 +51,12 @@ darkMode.addEventListener("click", () => {
         darkMode.classList.remove("text-white");
 
         //logoChange
-        logo1.setAttribute("src", "assets/imgs/logo_tafa.1.png");
-        logo2.setAttribute("src", "assets/imgs/logo_tafa.2.png");
+        logo1.setAttribute("src", "/assets/imgs/logo_tafa.1.png");
+        logo2.setAttribute("src", "/assets/imgs/logo_tafa.2.png");
 
         //bgChange
         footerContainer.classList.replace("text-black", "text-white");
+        menuBtn.classList.remove("text-white");
     }
 });
 
@@ -71,9 +75,24 @@ new Typewriter(titleAnim, {
     // .deleteChars(30) //suppr des chaines de Kres
     .start();
 
-new Typewriter(storyAnim, {})
+new Typewriter(storyAnim1, {})
     .changeDelay(50)
     .typeString(
         "Existant depuis 2020, la formation Tafa a été initié par passion for humanity, une entreprise digitale à vocation solidaire, ayant pour mission de favoriser l'inclusion numérique des jeunes, pour générer un impact durable ."
     )
     .start();
+
+new Typewriter(storyAnim2, {})
+    .changeDelay(50)
+    .typeString("Et la suite ...")
+    .start();
+
+/**
+ * toggle menu
+ */
+
+// let navbar = document.querySelector(".navbar");
+
+// document.querySelector("#menu_btn").onclick = () => {
+//     navbar.classList.toggle("active");
+// };

@@ -1,0 +1,61 @@
+body{
+    background-color:#48365ee8;
+    padding: 50px;
+    height: 100%;
+}
+.container{
+    width: 1000px;
+    height:auto;
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    padding: 0px;
+}
+.formulaire{
+    padding: 20px;
+}
+
+h1{
+    text-shadow: 0px 3px 4px #310839;
+    color: #48365ee8;
+    text-align: center;
+}
+.button{
+    width: 80%;
+    margin-top: 20px;
+    background-color: #48365ee8 ;
+    color: aliceblue;
+    font-size: 20px;
+    height: 40px;
+}
+
+.image{
+    width: 50%;
+}
+.image img{
+    height: 100%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.icon{
+    height: 30px;
+    width: 30px;
+}
+.file{
+    display: flex;
+}
+input{
+    width: 100%;
+}
+@media(max-width:950px) {
+    .image {
+        display: none;
+    }
+    .container{
+        width: 400px;
+        height:auto;
+        background-color: white;
+        border-radius: 10px;
+        padding: 0px;
+    }
+}
