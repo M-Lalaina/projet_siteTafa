@@ -1,6 +1,8 @@
 ## TO DO : Create app for Talent Factory [TAFA]
 
-###Conception d'une application web inscription & espace membre
+<h4>Conception d'une application web inscription & espace membre</h4>
+
+</br>
 
 <p>Partie Utilisateur : Envoie de candidature pour les prochaine promo TAFA 3.0</p>
 <p>Partie Back Office (admin) : -connexion & deconnexion @dashboard - validation/email - suppression - modification</p>
