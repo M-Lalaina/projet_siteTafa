@@ -4,7 +4,7 @@
 
 </br>
 
-<p>Partie Utilisateur : Envoie de candidature pour les prochaine promo TAFA 3.0</p>
+<p>Partie Utilisateur : Envoie de candidature pour intégrer la prochaine promo TAFA 3.0</p>
 <p>Partie Back Office (admin) : -connexion & deconnexion @dashboard - validation/email - suppression - modification</p>
 
 ## Team
