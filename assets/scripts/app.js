@@ -6,58 +6,58 @@ const hamMenu = document.getElementById("ham-menu");
 const zoomInEffect = document.querySelectorAll(".zoom-in");
 */
 
-var logo1 = document.getElementById("logo_tafa_1");
-var logo2 = document.getElementById("logo_tafa_2");
-var darkMode = document.getElementById("icon_darkmode");
-var heading = document.getElementById("heading");
-var footerContainer = document.getElementById("footer_container");
-var menuBtn = document.getElementById("menu_btn");
+var logo1 = document.getElementById('logo_tafa_1');
+var logo2 = document.getElementById('logo_tafa_2');
+var darkMode = document.getElementById('icon_darkmode');
+var heading = document.getElementById('heading');
+var footerContainer = document.getElementById('footer_container');
+var menuBtn = document.getElementById('menu_btn');
 
-const titleAnim = document.querySelector("h1");
-const storyAnim1 = document.getElementById("story_anim_1");
-const storyAnim2 = document.getElementById("story_anim_2");
+const titleAnim = document.querySelector('h1');
+const storyAnim1 = document.getElementById('story_anim_1');
+const storyAnim2 = document.getElementById('story_anim_2');
 
-logo1.setAttribute("src", "/assets/imgs/logo_tafa.1.png");
-logo2.setAttribute("src", "/assets/imgs/logo_tafa.2.png");
+logo1.setAttribute('src', 'assets/imgs/logo_tafa.1.png');
+logo2.setAttribute('src', 'assets/imgs/logo_tafa.2.png');
 
 // ......DARK MODE......
 /**
  * changement des couleurs selon le thème au click de l'icone "moon"
  */
 
-darkMode.addEventListener("click", () => {
-    //theme change
-    document.body.classList.toggle("bodyDarkMode");
+darkMode.addEventListener('click', () => {
+	//theme change
+	document.body.classList.toggle('bodyDarkMode');
 
-    if (document.body.classList.contains("bodyDarkMode")) {
-        //icon_ change
-        darkMode.classList.replace("fa-moon", "fa-sun");
+	if (document.body.classList.contains('bodyDarkMode')) {
+		//icon_ change
+		darkMode.classList.replace('fa-moon', 'fa-sun');
 
-        //text-color change
-        darkMode.classList.add("text-white");
+		//text-color change
+		darkMode.classList.add('text-white');
 
-        //logoChange
-        logo1.setAttribute("src", "/assets/imgs/logo_tafa.2.png");
-        logo2.setAttribute("src", "/assets/imgs/logo_tafa.1.png");
+		//logoChange
+		logo1.setAttribute('src', 'assets/imgs/logo_tafa.2.png');
+		logo2.setAttribute('src', 'assets/imgs/logo_tafa.1.png');
 
-        //bgChange
-        footerContainer.classList.replace("text-white", "text-black");
-        menuBtn.classList.add("text-white");
-    } else {
-        //icon_change
-        darkMode.classList.replace("fa-sun", "fa-moon");
+		//bgChange
+		footerContainer.classList.replace('text-white', 'text-black');
+		menuBtn.classList.add('text-white');
+	} else {
+		//icon_change
+		darkMode.classList.replace('fa-sun', 'fa-moon');
 
-        //text-color change
-        darkMode.classList.remove("text-white");
+		//text-color change
+		darkMode.classList.remove('text-white');
 
-        //logoChange
-        logo1.setAttribute("src", "/assets/imgs/logo_tafa.1.png");
-        logo2.setAttribute("src", "/assets/imgs/logo_tafa.2.png");
+		//logoChange
+		logo1.setAttribute('src', 'assets/imgs/logo_tafa.1.png');
+		logo2.setAttribute('src', 'assets/imgs/logo_tafa.2.png');
 
-        //bgChange
-        footerContainer.classList.replace("text-black", "text-white");
-        menuBtn.classList.remove("text-white");
-    }
+		//bgChange
+		footerContainer.classList.replace('text-black', 'text-white');
+		menuBtn.classList.remove('text-white');
+	}
 });
 
 /**
@@ -65,27 +65,27 @@ darkMode.addEventListener("click", () => {
  */
 
 new Typewriter(titleAnim, {
-    // loop: true,
-    // deleteSpeed:20
+	// loop: true,
+	// deleteSpeed:20
 })
-    //.changeDelay(20) //changer la vitesse de l'écriture
-    .typeString("Talent Factory ou [TAFA]") //écire du texte
-    .pauseFor(300) //pause en millisec
-    // .typeString("Formation professionnelle sur les métiers du numérique")
-    // .deleteChars(30) //suppr des chaines de Kres
-    .start();
+	//.changeDelay(20) //changer la vitesse de l'écriture
+	.typeString('Talent Factory ou [TAFA]') //écire du texte
+	.pauseFor(300) //pause en millisec
+	// .typeString("Formation professionnelle sur les métiers du numérique")
+	// .deleteChars(30) //suppr des chaines de Kres
+	.start();
 
 new Typewriter(storyAnim1, {})
-    .changeDelay(50)
-    .typeString(
-        "Existant depuis 2020, la formation Tafa a été initié par passion for humanity, une entreprise digitale à vocation solidaire, ayant pour mission de favoriser l'inclusion numérique des jeunes, pour générer un impact durable ."
-    )
-    .start();
+	.changeDelay(50)
+	.typeString(
+		"Existant depuis 2020, la formation Tafa a été initié par passion for humanity, une entreprise digitale à vocation solidaire, ayant pour mission de favoriser l'inclusion numérique des jeunes, pour générer un impact durable .",
+	)
+	.start();
 
 new Typewriter(storyAnim2, {})
-    .changeDelay(50)
-    .typeString("Et la suite ...")
-    .start();
+	.changeDelay(50)
+	.typeString('Et la suite ...')
+	.start();
 
 /**
  * toggle menu
